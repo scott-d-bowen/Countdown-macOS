@@ -7,10 +7,13 @@
 
 import SwiftUI
 
+// var september1st = Calendar(identifier: .gregorian).date(from: September1st().dateComponents )
+var september1st = September1st()
+var september1stText = september1st.dateFormatter.string(from: september1st.date() )
+
 struct ContentView: View {
     
     @State var currentDate = Date()
-    @State var september1st = Calendar(identifier: .gregorian).date(from: September1st().dateComponents )
     @State var timeRemainingString: String = "..."
     
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
@@ -23,12 +26,10 @@ struct ContentView: View {
             Text("\(currentDate)")
                 .onReceive(timer) { input in
                     currentDate = input
-                    timeRemainingString = buildTimeRemainingString(futuredate: september1st!, currentDate: currentDate, secondsRemaining: UInt64(DateInterval(start: currentDate, end: september1st!).duration ))
+                    timeRemainingString = buildTimeRemainingString(futuredate: september1st.date(), currentDate: currentDate, secondsRemaining: UInt64(DateInterval(start: currentDate, end: september1st.date()).duration ))
             }
             Divider()
-            Text("Counting down until:")
-                .bold()
-            Text("\(september1st!)")
+            CountdownUntil()
             Divider()
             Text("Time remaining:")
                 .bold()
@@ -36,6 +37,17 @@ struct ContentView: View {
             Divider()
         }
         .font(.largeTitle)
+    }
+}
+
+
+struct CountdownUntil: View {
+    var body: some View {
+        VStack {
+            Text("Counting down until:")
+                .bold()
+            Text("\(september1stText)")
+        }
     }
 }
 

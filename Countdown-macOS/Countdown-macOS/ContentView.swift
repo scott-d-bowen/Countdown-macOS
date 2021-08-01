@@ -12,7 +12,6 @@ struct ContentView: View {
     @State var currentDate = Date()
     @State var september1st = Calendar(identifier: .gregorian).date(from: September1st().dateComponents )
     @State var timeRemainingString: String = "..."
-    @State var intermediateSecondsRemaining: UInt64 = 0
     
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 

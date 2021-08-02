@@ -14,7 +14,7 @@ class September1st: ObservableObject {
     
     static let dateFormatter = DateFormatter()
     
-    @Published var countDownUntilText: String = September1st.dateFormatter.string(from: September1st.date(dayOfMonth: 1) )
+    @Published var countDownUntilText: String = "Pending..." // = September1st.dateFormatter.string(from: September1st.date(dayOfMonth: 1) )
     
     func setAndGetCountDownUntilText(dayOfMonth: Int) -> String {
         self.countDownUntilText = September1st.dateFormatter.string(from: September1st.date(dayOfMonth: dayOfMonth) )
@@ -40,6 +40,7 @@ class September1st: ObservableObject {
         
         // let initSept1st = September1st(dayOfMonth: dayOfMonth)
         let calendar = Calendar(identifier: .gregorian)
+        September1st.dateComponents.day = dayOfMonth
         let retDate = calendar.date(from: self.dateComponents)
         
         return retDate! // .date(from: September1st(dayOfMonth: dayOfMonth).dateComponents )

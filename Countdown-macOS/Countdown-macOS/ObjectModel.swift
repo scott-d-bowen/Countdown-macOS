@@ -12,6 +12,6 @@ class ObjectModel: ObservableObject {
     @Published var september: September1st
     
     init() {
-        self.september = September1st(dayOfMonth: 1)
+        self.september = September1st(dayOfMonth: 7)
     }
 }

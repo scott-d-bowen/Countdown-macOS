@@ -10,8 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     @StateObject var objectModel = ObjectModel()
-    
-    @ObservedObject var september1st = September1st(dayOfMonth: 1)
+    @State var dayOfMonth: Int = 14
     
     @State var currentDate = Date()
     @State var timeRemainingString: String = "..."
@@ -19,10 +18,6 @@ struct ContentView: View {
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     @State var countDownUntilText: String?
-    
-    init() {
-        september1st = September1st(dayOfMonth: 1)
-    }
     
     var body: some View {
         VStack {
@@ -32,10 +27,10 @@ struct ContentView: View {
             Text("\(currentDate)")
                 .onReceive(timer) { input in
                     currentDate = input
-                    timeRemainingString = buildTimeRemainingString(futuredate: September1st.date(dayOfMonth: 1), currentDate: currentDate, secondsRemaining: UInt64(DateInterval(start: currentDate, end: September1st.date(dayOfMonth: 1)).duration ))
+                    timeRemainingString = buildTimeRemainingString(futuredate: September1st.date(dayOfMonth: dayOfMonth), currentDate: currentDate, secondsRemaining: UInt64(DateInterval(start: currentDate, end: September1st.date(dayOfMonth: dayOfMonth)).duration ))
             }
             Divider()
-            CountdownUntil() // (countDownUntilText: countDownUntilText)
+            CountdownUntil(dayOfMonth: $dayOfMonth) // (countDownUntilText: countDownUntilText)
             Divider()
             Text("Time remaining:")
                 .bold()
@@ -50,21 +45,22 @@ struct ContentView: View {
 struct CountdownUntil: View {
     
     @EnvironmentObject var objectModel: ObjectModel
+    @Binding var dayOfMonth: Int
     
     var days = [1, 7, 14]
-    @State private var selectedDay = 1
+    // @State private var selectedDay = 1
 
     var body: some View {
         VStack {
-            Picker("Please choose a day", selection: $selectedDay) {
+            Picker("Please choose a day", selection: $dayOfMonth) {
                 ForEach(days, id: \.self) { idx in
-                    Text("\(idx): \(selectedDay.description)")
+                    Text("\(idx): \(dayOfMonth.description)")
                 }
             }
-            Text("You selected: \(selectedDay)")
-            Text(objectModel.september.setAndGetCountDownUntilText(dayOfMonth: selectedDay))
+            Text("You selected: \(dayOfMonth)")
+            Text(objectModel.september.setAndGetCountDownUntilText(dayOfMonth: dayOfMonth))
         }
-        // .environmentObject(objectModel)
+        .environmentObject(objectModel)
     }
 }
 

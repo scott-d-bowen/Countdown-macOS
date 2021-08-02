@@ -3,28 +3,32 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		764FFE5826B700CF00FF3D77 /* Countdown_macOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764FFE5726B700CF00FF3D77 /* Countdown_macOSApp.swift */; };
-		764FFE5A26B700CF00FF3D77 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764FFE5926B700CF00FF3D77 /* ContentView.swift */; };
-		764FFE5C26B700D000FF3D77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 764FFE5B26B700D000FF3D77 /* Assets.xcassets */; };
-		764FFE5F26B700D000FF3D77 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 764FFE5E26B700D000FF3D77 /* Preview Assets.xcassets */; };
-		764FFE6626B7027B00FF3D77 /* September1st.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764FFE6526B7027B00FF3D77 /* September1st.swift */; };
+		764758AC26B7FF9E0022773F /* Countdown_macOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764758AB26B7FF9E0022773F /* Countdown_macOSApp.swift */; };
+		764758AE26B7FF9E0022773F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764758AD26B7FF9E0022773F /* ContentView.swift */; };
+		764758B026B7FF9E0022773F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 764758AF26B7FF9E0022773F /* Assets.xcassets */; };
+		764758B326B7FF9E0022773F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 764758B226B7FF9E0022773F /* Preview Assets.xcassets */; };
+		764758BC26B7FFFB0022773F /* September1st.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764758BB26B7FFFB0022773F /* September1st.swift */; };
+		764758BE26B813B00022773F /* ObjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764758BD26B813B00022773F /* ObjectModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		764FFE5426B700CF00FF3D77 /* Countdown-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Countdown-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		764FFE5726B700CF00FF3D77 /* Countdown_macOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Countdown_macOSApp.swift; sourceTree = "<group>"; };
-		764FFE5926B700CF00FF3D77 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		764FFE5B26B700D000FF3D77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		764FFE5E26B700D000FF3D77 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		764FFE6526B7027B00FF3D77 /* September1st.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = September1st.swift; sourceTree = "<group>"; };
+		764758A826B7FF9E0022773F /* Countdown-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Countdown-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		764758AB26B7FF9E0022773F /* Countdown_macOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Countdown_macOSApp.swift; sourceTree = "<group>"; };
+		764758AD26B7FF9E0022773F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		764758AF26B7FF9E0022773F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		764758B226B7FF9E0022773F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		764758B426B7FF9E0022773F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		764758B526B7FF9E0022773F /* Countdown_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Countdown_macOS.entitlements; sourceTree = "<group>"; };
+		764758BB26B7FFFB0022773F /* September1st.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = September1st.swift; sourceTree = "<group>"; };
+		764758BD26B813B00022773F /* ObjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		764FFE5126B700CF00FF3D77 /* Frameworks */ = {
+		764758A526B7FF9E0022773F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -34,38 +38,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		764FFE4B26B700CF00FF3D77 = {
+		7647589F26B7FF9E0022773F = {
 			isa = PBXGroup;
 			children = (
-				764FFE5626B700CF00FF3D77 /* Countdown-macOS */,
-				764FFE5526B700CF00FF3D77 /* Products */,
+				764758AA26B7FF9E0022773F /* Countdown-macOS */,
+				764758A926B7FF9E0022773F /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		764FFE5526B700CF00FF3D77 /* Products */ = {
+		764758A926B7FF9E0022773F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				764FFE5426B700CF00FF3D77 /* Countdown-macOS.app */,
+				764758A826B7FF9E0022773F /* Countdown-macOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		764FFE5626B700CF00FF3D77 /* Countdown-macOS */ = {
+		764758AA26B7FF9E0022773F /* Countdown-macOS */ = {
 			isa = PBXGroup;
 			children = (
-				764FFE5726B700CF00FF3D77 /* Countdown_macOSApp.swift */,
-				764FFE5926B700CF00FF3D77 /* ContentView.swift */,
-				764FFE6526B7027B00FF3D77 /* September1st.swift */,
-				764FFE5B26B700D000FF3D77 /* Assets.xcassets */,
-				764FFE5D26B700D000FF3D77 /* Preview Content */,
+				764758BD26B813B00022773F /* ObjectModel.swift */,
+				764758AB26B7FF9E0022773F /* Countdown_macOSApp.swift */,
+				764758AD26B7FF9E0022773F /* ContentView.swift */,
+				764758BB26B7FFFB0022773F /* September1st.swift */,
+				764758AF26B7FF9E0022773F /* Assets.xcassets */,
+				764758B426B7FF9E0022773F /* Info.plist */,
+				764758B526B7FF9E0022773F /* Countdown_macOS.entitlements */,
+				764758B126B7FF9E0022773F /* Preview Content */,
 			);
 			path = "Countdown-macOS";
 			sourceTree = "<group>";
 		};
-		764FFE5D26B700D000FF3D77 /* Preview Content */ = {
+		764758B126B7FF9E0022773F /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				764FFE5E26B700D000FF3D77 /* Preview Assets.xcassets */,
+				764758B226B7FF9E0022773F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -73,13 +80,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		764FFE5326B700CF00FF3D77 /* Countdown-macOS */ = {
+		764758A726B7FF9E0022773F /* Countdown-macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 764FFE6226B700D000FF3D77 /* Build configuration list for PBXNativeTarget "Countdown-macOS" */;
+			buildConfigurationList = 764758B826B7FF9E0022773F /* Build configuration list for PBXNativeTarget "Countdown-macOS" */;
 			buildPhases = (
-				764FFE5026B700CF00FF3D77 /* Sources */,
-				764FFE5126B700CF00FF3D77 /* Frameworks */,
-				764FFE5226B700CF00FF3D77 /* Resources */,
+				764758A426B7FF9E0022773F /* Sources */,
+				764758A526B7FF9E0022773F /* Frameworks */,
+				764758A626B7FF9E0022773F /* Resources */,
 			);
 			buildRules = (
 			);
@@ -87,75 +94,75 @@
 			);
 			name = "Countdown-macOS";
 			productName = "Countdown-macOS";
-			productReference = 764FFE5426B700CF00FF3D77 /* Countdown-macOS.app */;
+			productReference = 764758A826B7FF9E0022773F /* Countdown-macOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		764FFE4C26B700CF00FF3D77 /* Project object */ = {
+		764758A026B7FF9E0022773F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1300;
-				LastUpgradeCheck = 1300;
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
 				TargetAttributes = {
-					764FFE5326B700CF00FF3D77 = {
-						CreatedOnToolsVersion = 13.0;
+					764758A726B7FF9E0022773F = {
+						CreatedOnToolsVersion = 12.5.1;
 					};
 				};
 			};
-			buildConfigurationList = 764FFE4F26B700CF00FF3D77 /* Build configuration list for PBXProject "Countdown-macOS" */;
-			compatibilityVersion = "Xcode 13.0";
+			buildConfigurationList = 764758A326B7FF9E0022773F /* Build configuration list for PBXProject "Countdown-macOS" */;
+			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 764FFE4B26B700CF00FF3D77;
-			productRefGroup = 764FFE5526B700CF00FF3D77 /* Products */;
+			mainGroup = 7647589F26B7FF9E0022773F;
+			productRefGroup = 764758A926B7FF9E0022773F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				764FFE5326B700CF00FF3D77 /* Countdown-macOS */,
+				764758A726B7FF9E0022773F /* Countdown-macOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		764FFE5226B700CF00FF3D77 /* Resources */ = {
+		764758A626B7FF9E0022773F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				764FFE5F26B700D000FF3D77 /* Preview Assets.xcassets in Resources */,
-				764FFE5C26B700D000FF3D77 /* Assets.xcassets in Resources */,
+				764758B326B7FF9E0022773F /* Preview Assets.xcassets in Resources */,
+				764758B026B7FF9E0022773F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		764FFE5026B700CF00FF3D77 /* Sources */ = {
+		764758A426B7FF9E0022773F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				764FFE5A26B700CF00FF3D77 /* ContentView.swift in Sources */,
-				764FFE5826B700CF00FF3D77 /* Countdown_macOSApp.swift in Sources */,
-				764FFE6626B7027B00FF3D77 /* September1st.swift in Sources */,
+				764758BE26B813B00022773F /* ObjectModel.swift in Sources */,
+				764758AE26B7FF9E0022773F /* ContentView.swift in Sources */,
+				764758AC26B7FF9E0022773F /* Countdown_macOSApp.swift in Sources */,
+				764758BC26B7FFFB0022773F /* September1st.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		764FFE6026B700D000FF3D77 /* Debug */ = {
+		764758B626B7FF9E0022773F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -200,7 +207,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -210,13 +217,13 @@
 			};
 			name = Debug;
 		};
-		764FFE6126B700D000FF3D77 /* Release */ = {
+		764758B726B7FF9E0022773F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -255,7 +262,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -264,60 +271,50 @@
 			};
 			name = Release;
 		};
-		764FFE6326B700D000FF3D77 /* Debug */ = {
+		764758B926B7FF9E0022773F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Countdown-macOS/Countdown_macOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Countdown-macOS/Preview Content\"";
 				DEVELOPMENT_TEAM = 666VXET5X8;
-				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				ENABLE_USER_SELECTED_FILES = readonly;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_FILE = "Countdown-macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "network.bowen.Countdown-macOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		764FFE6426B700D000FF3D77 /* Release */ = {
+		764758BA26B7FF9E0022773F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Countdown-macOS/Countdown_macOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Countdown-macOS/Preview Content\"";
 				DEVELOPMENT_TEAM = 666VXET5X8;
-				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				ENABLE_USER_SELECTED_FILES = readonly;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_FILE = "Countdown-macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "network.bowen.Countdown-macOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -325,25 +322,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		764FFE4F26B700CF00FF3D77 /* Build configuration list for PBXProject "Countdown-macOS" */ = {
+		764758A326B7FF9E0022773F /* Build configuration list for PBXProject "Countdown-macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				764FFE6026B700D000FF3D77 /* Debug */,
-				764FFE6126B700D000FF3D77 /* Release */,
+				764758B626B7FF9E0022773F /* Debug */,
+				764758B726B7FF9E0022773F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		764FFE6226B700D000FF3D77 /* Build configuration list for PBXNativeTarget "Countdown-macOS" */ = {
+		764758B826B7FF9E0022773F /* Build configuration list for PBXNativeTarget "Countdown-macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				764FFE6326B700D000FF3D77 /* Debug */,
-				764FFE6426B700D000FF3D77 /* Release */,
+				764758B926B7FF9E0022773F /* Debug */,
+				764758BA26B7FF9E0022773F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 764FFE4C26B700CF00FF3D77 /* Project object */;
+	rootObject = 764758A026B7FF9E0022773F /* Project object */;
 }

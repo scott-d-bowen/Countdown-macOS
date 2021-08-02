@@ -4,20 +4,24 @@
 //
 //  Created by Scott D. Bowen on 2/8/21.
 //
-
 import SwiftUI
 
-// var september1st = Calendar(identifier: .gregorian).date(from: September1st().dateComponents )
-var september1st = September1st()
-var september1stText = september1st.dateFormatter.string(from: september1st.date() )
 
 struct ContentView: View {
+    
+    @ObservedObject var september1st = September1st(dayOfMonth: 1)
     
     @State var currentDate = Date()
     @State var timeRemainingString: String = "..."
     
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-
+    
+    @State var countDownUntilText: String?
+    
+    init() {
+        september1st = September1st(dayOfMonth: 1)
+    }
+    
     var body: some View {
         VStack {
             Divider()
@@ -26,10 +30,10 @@ struct ContentView: View {
             Text("\(currentDate)")
                 .onReceive(timer) { input in
                     currentDate = input
-                    timeRemainingString = buildTimeRemainingString(futuredate: september1st.date(), currentDate: currentDate, secondsRemaining: UInt64(DateInterval(start: currentDate, end: september1st.date()).duration ))
+                    timeRemainingString = buildTimeRemainingString(futuredate: September1st.date(dayOfMonth: 1), currentDate: currentDate, secondsRemaining: UInt64(DateInterval(start: currentDate, end: September1st.date(dayOfMonth: 1)).duration ))
             }
             Divider()
-            CountdownUntil()
+            CountdownUntil() // (countDownUntilText: countDownUntilText)
             Divider()
             Text("Time remaining:")
                 .bold()
@@ -42,11 +46,14 @@ struct ContentView: View {
 
 
 struct CountdownUntil: View {
+    
+    @ObservedObject var objectModel: ObjectModel = ObjectModel()
+    
     var body: some View {
         VStack {
             Text("Counting down until:")
                 .bold()
-            Text("\(september1stText)")
+            Text(objectModel.september.countDownUntilText)
         }
     }
 }

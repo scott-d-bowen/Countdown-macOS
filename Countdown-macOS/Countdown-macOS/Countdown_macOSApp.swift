@@ -10,12 +10,12 @@ import SwiftUI
 @main
 struct Countdown_macOSApp: App {
     
-    @StateObject var objectModel = ObjectModel()
+    // @EnvironmentObject var objectModel: ObjectModel
     
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(objectModel)
+                // .environmentObject(objectModel)
         }
     }
 }

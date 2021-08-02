@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @StateObject var objectModel = ObjectModel()
+    
     @ObservedObject var september1st = September1st(dayOfMonth: 1)
     
     @State var currentDate = Date()
@@ -41,19 +43,48 @@ struct ContentView: View {
             Divider()
         }
         .font(.largeTitle)
+        .environmentObject(objectModel)
     }
 }
 
-
 struct CountdownUntil: View {
     
+    @EnvironmentObject var objectModel: ObjectModel
+    
+    var days = [1, 7, 14]
+    @State private var selectedDay = 1
+
+    var body: some View {
+        VStack {
+            Picker("Please choose a day", selection: $selectedDay) {
+                ForEach(days, id: \.self) { idx in
+                    Text("\(idx): \(selectedDay.description)")
+                }
+            }
+            Text("You selected: \(selectedDay)")
+            Text(objectModel.september.setAndGetCountDownUntilText(dayOfMonth: selectedDay))
+        }
+        // .environmentObject(objectModel)
+    }
+}
+
+struct CountdownUntil__OLD: View {
+    
     @ObservedObject var objectModel: ObjectModel = ObjectModel()
+    private var days = [1, 7, 14]
+    @State private var selectedDay = 1
     
     var body: some View {
         VStack {
             Text("Counting down until:")
                 .bold()
-            Text(objectModel.september.countDownUntilText)
+            Picker("Picker", selection: $selectedDay) {
+                ForEach(days, id: \.self) { _ in
+                    //, id: \.self) { _ in // days in
+                    Text("\(selectedDay)")
+                }
+            }
+            Text(objectModel.september.setAndGetCountDownUntilText(dayOfMonth: selectedDay))
         }
     }
 }

@@ -14,7 +14,12 @@ class September1st: ObservableObject {
     
     static let dateFormatter = DateFormatter()
     
-    var countDownUntilText = September1st.dateFormatter.string(from: September1st.date(dayOfMonth: 1) )
+    @Published var countDownUntilText: String = September1st.dateFormatter.string(from: September1st.date(dayOfMonth: 1) )
+    
+    func setAndGetCountDownUntilText(dayOfMonth: Int) -> String {
+        self.countDownUntilText = September1st.dateFormatter.string(from: September1st.date(dayOfMonth: dayOfMonth) )
+        return self.countDownUntilText
+    }
 
     init(dayOfMonth: Int) {
         
